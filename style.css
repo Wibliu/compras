@@ -1,0 +1,241 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("img/fundo.jpg");
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 9999;
+}
+
+h1 {
+    font-family: Quicksand;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.685);
+}
+
+.mymenu {
+    display: flex;
+    justify-content: end;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.hidden {
+    display: flex;
+    position: absolute;
+    left: 95%;
+    width: 5%;
+    height: 3rem;
+    border: none;
+    background: rgba(41, 40, 40, 0.123);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    top: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.hidden:hover {
+    background: rgba(80, 79, 79, 0.123);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+    width: 0%;
+    height: 0;
+    transition: 3s;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: 999;
+}
+
+.menu.active {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    visibility: visible;
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(153, 149, 149, 0.733);
+    box-shadow: 0 8px 15px 0 rgba(31, 38, 135, 0.822);
+    backdrop-filter: blur (2px);
+    transition: 2s;
+}
+
+ul.active {
+    font-size: 2rem;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.open {
+    display: flex;
+    width: 20%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.open:hover {
+    width: 80%;
+    height: 80vh;
+    background: #6b0f1a71;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: 2s;
+}
+
+.subprodutos {
+    position: relative;
+    left: -50px;
+    width: 100%;
+    height: 80vh;
+    flex-direction: column;
+    font-size: 1.9rem;
+    justify-content: space-around;
+}
+
+.itens {
+    display: flex;
+    justify-content: center;
+}
+
+.itens:hover {
+    display: flex;
+    border: 1px solid #000;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.promos {
+    display: flex;
+    position: relative;
+    left: 40%;
+    justify-content: center;
+    font-size: 2rem;
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 20px;
+    padding: 10px;
+    width: fit-content;
+    background: none;
+    transition: 1s;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.promos:hover {
+    border-radius: 20px;
+    border: 1px solid rgb(131, 131, 131);
+    background-color: #6b0f1a71;
+    transition: 1s;
+    overflow-y: visible;
+    overflow-x: visible;
+}
+
+.promos a {
+    color: rgb(236, 232, 232);
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        height: 120vh;
+        background-repeat: inherit;
+        background-size: initial;
+    }
+    h1 {
+        font-family: Quicksand;
+        font-size: 3rem;
+        color: rgba(0, 0, 0, 0.685);
+    }
+    .hidden {
+        display: flex;
+        position: absolute;
+        left: 60%;
+        width: 20%;
+        height: 3rem;
+        font-size: 2rem;
+        border: none;
+        background: rgba(41, 40, 40, 0.123);
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        top: 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        color: #fff8f971;
+    }
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        visibility: hidden;
+        width: 0%;
+        height: 0;
+        transition: 3s;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        z-index: 999;
+    }
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        visibility: visible;
+        width: 100%;
+        height: 120vh;
+        background-color: rgba(153, 149, 149, 0.733);
+        box-shadow: 0 8px 15px 0 rgba(31, 38, 135, 0.822);
+        backdrop-filter: blur (2px);
+        transition: 2s;
+    }
+    .open {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .subprodutos {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        font-size: 1.5rem;
+        gap: 50px;
+        justify-content: flex-start;
+    }
+    .itens {
+        display: flexbox;
+        justify-content: center;
+        border-bottom: 1px solid #fff8f971;
+    }
+    .promos {
+        display: flex;
+        position: relative;
+        left: 30%;
+        font-size: 2rem;
+        border: 1px solid rgb(131, 131, 131);
+        border-radius: 20px;
+        padding: 10px;
+        width: fit-content;
+        background: none;
+    }
+}
